@@ -1,18 +1,28 @@
 name: Testing
+
 inputs:
   codecov_token:
     description: Codecov access token
     required: true
+
 runs:
   using: 'composite'
   steps:
-    - run: npm ci
+    - name: Install Node modules
+      shell: bash
+      run: npm ci
 
-    - run: npm run lint --if-present
+    - name: Linting
+      shell: bash
+      run: npm run lint --if-present
 
-    - run: npm run build --if-present
+    - name: Building
+      shell: bash
+      run: npm run build --if-present
 
-    - run: npm run test:ci
+    - name: Testing
+      shell: bash
+      run: npm run test:ci
 
     - uses: codecov/codecov-action@v3
       with:
