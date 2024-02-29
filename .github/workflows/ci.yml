@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./.github/actions/checkout
+      - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/test
+        with:
+          codecov_token: ${{ secrets.CODECOV_TOKEN }}
