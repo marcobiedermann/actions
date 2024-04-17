@@ -1,12 +1,11 @@
 name: CI
-
 on:
   workflow_call:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 5
     steps:
       - uses: marcobiedermann/actions/.github/actions/checkout@main
       - uses: marcobiedermann/actions/.github/actions/setup-node@main
