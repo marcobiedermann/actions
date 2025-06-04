@@ -24,6 +24,6 @@ runs:
       shell: bash
       run: npm run test:ci
 
-    - uses: codecov/codecov-action@v3
+    - uses: codecov/codecov-action@v5
       with:
         token: ${{ inputs.codecov_token }}
