@@ -6,7 +6,7 @@ inputs:
     required: true
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Install Node modules
       shell: bash
@@ -22,7 +22,7 @@ runs:
 
     - name: Testing
       shell: bash
-      run: npm run test:ci
+      run: npm run coverage --if-present
 
     - uses: codecov/codecov-action@v5
       with:
