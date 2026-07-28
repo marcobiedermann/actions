@@ -1,6 +1,9 @@
 name: CI
 on:
   workflow_call:
+    secrets:
+      CODECOV_TOKEN:
+        required: true
 
 jobs:
   build:
@@ -10,5 +13,6 @@ jobs:
       - uses: marcobiedermann/actions/.github/actions/checkout@main
       - uses: marcobiedermann/actions/.github/actions/setup-node@main
       - uses: marcobiedermann/actions/.github/actions/test@main
+      - uses: marcobiedermann/actions/.github/actions/upload-coverage@main
         with:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}

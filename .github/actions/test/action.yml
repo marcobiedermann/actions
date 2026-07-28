@@ -1,10 +1,5 @@
 name: Testing
 
-inputs:
-  codecov_token:
-    description: Codecov access token
-    required: true
-
 runs:
   using: "composite"
   steps:
@@ -23,7 +18,3 @@ runs:
     - name: Testing
       shell: bash
       run: npm run coverage --if-present
-
-    - uses: codecov/codecov-action@v5
-      with:
-        token: ${{ inputs.codecov_token }}
