@@ -1,5 +1,4 @@
 name: Checkout
-description: Thin wrapper around actions/checkout with no additional configuration.
 runs:
   using: "composite"
   steps:
