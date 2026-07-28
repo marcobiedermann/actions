@@ -1,4 +1,5 @@
 name: Setup Node.js
+description: Sets up Node.js using the version from .nvmrc with npm caching enabled.
 runs:
   using: "composite"
   steps:
