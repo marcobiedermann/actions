@@ -1,0 +1,13 @@
+name: Upload Coverage
+
+inputs:
+  codecov_token:
+    description: Codecov access token
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: codecov/codecov-action@v5
+      with:
+        token: ${{ inputs.codecov_token }}
