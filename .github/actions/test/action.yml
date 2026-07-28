@@ -1,4 +1,5 @@
 name: Testing
+description: Installs dependencies via npm ci and runs the lint, build, and coverage scripts (each skipped if not defined).
 
 runs:
   using: "composite"
