@@ -1,4 +1,5 @@
 name: Upload Coverage
+description: Thin wrapper around codecov/codecov-action that uploads coverage reports to Codecov.
 
 inputs:
   codecov_token:
